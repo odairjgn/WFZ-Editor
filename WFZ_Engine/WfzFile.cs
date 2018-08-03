@@ -4,9 +4,6 @@ using WFZ_Engine.XMLFiles;
 
 namespace WFZ_Engine
 {
-    /// <summary>
-    /// Teste
-    /// </summary>
     public class WfzFile
     {
         public watchfaceinfo Description { get; set; } = new watchfaceinfo();
