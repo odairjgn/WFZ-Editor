@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 该文件描述表盘中出现的控件元素, 支持定义的控件有背景(background), 刻度(graduation), 指针(timehand), 数据项定制(datawidget) -->
+<WatchFace version="1.0">
+	<!-- 状态图标View的topY值, 状态图标所在View厚度为82px -->
+	<WatchFaceItem type="statusbar" y="32" />
+	<WatchFaceItem type="lowpower" y="32" />	
+    <!-- 背景, 其中config表示背景资源的位置, "@wfz/"表示资源位于表盘包里, "background/01.png"表示资源的路径; mask标识选择背景时的高亮选框的图片资源, configList表示背景支持的可选列表, 可选列表配置在background_list.xml文件中 -->
+	<WatchFaceItem type="background" config="@wfz/background/01.png" configList="@wfz/background_list.xml" />
+	<!-- 表盘数字, 其中x, y, width, height表示该数字显示的位置范围, font表示数字和AM/PM使用的图片字体, preview为全屏预览图供选择器使用, 如果没有配置可选列表, preview可留空, mask为配合该位置范围的选框资源, color为字体颜色, 暂不支持, gap为字体间隔, 暂不支持, model为数字布局方式, 默认为0横向排布, 其他model暂不支持 -->
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/03" preview="@wfz/timedigital/preview2.png" mask="@wfz/timedigital/mask_fg.png" configList="@wfz/timedigital_list.xml" />
+	<!-- 表盘数据项定制, 数据项的种类已内置在手表系统中, 目前支持7种数据项, 对应的dataType分别如下: 今日步数(datatype = 1), 今日里程(datatype = 2), 总里程(datatype = 3), 今日消耗(datatype = 4), 
+	最近心律(datatype = 5), 日期(datatype = 6), 剩余电力(datatype = 10); 更多的数据项支持将在今后的系统中更新. 其中id表示该数据项的唯一id, x和y分别为该数据项的位置, model为该数据项的显示形式, 
+	默认为0,显示形式为圆形带进度条布局文字在中心, model=1为横向显示,左侧图标右侧文字; 日期较为特殊, modle=0为左侧日期右侧星期, model=1为仅日期, model=2为仅星期, 以后同一数据项会支持更多的显示形式;
+	configList为该数据项的可选列表 -->
+	<WatchFaceItem type="datawidget" id="0" x="40" y="66" dataType="2" model="1" mask="@wfz/datawidget/mask_0_fg.png" configList="@wfz/datawidget_list.xml" />
+	<WatchFaceItem type="datawidget" id="1" x="160" y="66" dataType="10" model="1" mask="@wfz/datawidget/mask_1_fg.png" configList="@wfz/datawidget_list.xml" />
+	<WatchFaceItem type="datawidget" id="2" x="40" y="229" dataType="6" model="1" mask="@wfz/datawidget/mask_2_fg.png" configList="@wfz/datawidget_list.xml" />
+	<WatchFaceItem type="datawidget" id="3" x="160" y="229" dataType="6" model="2" mask="@wfz/datawidget/mask_3_fg.png" configList="@wfz/datawidget_list.xml" />
+</WatchFace>

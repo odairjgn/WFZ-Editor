@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFZ Editor", "WFZ Editor\WFZ Editor.csproj", "{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFZ_Engine", "WFZ_Engine\WFZ_Engine.csproj", "{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{57ADD286-1A50-451C-80C8-14F21D54FF68}"
+	ProjectSection(SolutionItems) = preProject
+		Extras\5b55759665b5d_23072018.wfz = Extras\5b55759665b5d_23072018.wfz
+		Extras\5b5763a250c51_24072018.wfz = Extras\5b5763a250c51_24072018.wfz
+		Extras\8c_palette.act = Extras\8c_palette.act
+		Extras\wfz03c6c7.wfz = Extras\wfz03c6c7.wfz
+		Extras\wfz3897e9.wfz = Extras\wfz3897e9.wfz
+		Extras\wfz58ac65.wfz = Extras\wfz58ac65.wfz
+		Extras\wfz95a54c.wfz = Extras\wfz95a54c.wfz
+		Extras\wfzb33179.wfz = Extras\wfzb33179.wfz
+		Extras\wfzd0b8cb.wfz = Extras\wfzd0b8cb.wfz
+		Extras\wfzeacf94.wfz = Extras\wfzeacf94.wfz
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFZ_Data", "WFZ_Data\WFZ_Data.csproj", "{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|x64.ActiveCfg = Debug|x64
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|x64.Build.0 = Debug|x64
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|x86.ActiveCfg = Debug|x86
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Debug|x86.Build.0 = Debug|x86
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|x64.ActiveCfg = Release|x64
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|x64.Build.0 = Release|x64
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|x86.ActiveCfg = Release|x86
+		{D226B50A-EB5E-4C35-BB4D-0FBC7D8C06A6}.Release|x86.Build.0 = Release|x86
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|x64.ActiveCfg = Debug|x64
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|x64.Build.0 = Debug|x64
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|x86.ActiveCfg = Debug|x86
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Debug|x86.Build.0 = Debug|x86
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|x64.ActiveCfg = Release|x64
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|x64.Build.0 = Release|x64
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|x86.ActiveCfg = Release|x86
+		{C2FB9E47-14B1-4E7D-AF6C-9928E604FE47}.Release|x86.Build.0 = Release|x86
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|x64.ActiveCfg = Debug|x64
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|x64.Build.0 = Debug|x64
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|x86.ActiveCfg = Debug|x86
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Debug|x86.Build.0 = Debug|x86
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|x64.ActiveCfg = Release|x64
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|x64.Build.0 = Release|x64
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|x86.ActiveCfg = Release|x86
+		{B48EC0CD-4091-4AEF-85F0-0D7DECB71A09}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF6143D2-05C7-4307-9298-80E9A75F2238}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://odairjgn.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WFZ\u0020Editor\\WFZ\u0020Editor.csproj
+		SccProjectName1 = WFZ\u0020Editor
+		SccLocalPath1 = WFZ\u0020Editor
+		SccProjectUniqueName2 = WFZ_Engine\\WFZ_Engine.csproj
+		SccProjectName2 = WFZ_Engine
+		SccLocalPath2 = WFZ_Engine
+		SccProjectUniqueName3 = WFZ_Data\\WFZ_Data.csproj
+		SccProjectName3 = WFZ_Data
+		SccLocalPath3 = WFZ_Data
+	EndGlobalSection
+EndGlobal

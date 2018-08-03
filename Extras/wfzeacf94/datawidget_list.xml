@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 表盘数据项定制可选列表, 数据项的种类已内置在手表系统中, 目前支持7种数据项, 对应的dataType分别如下: 今日步数(datatype = 1), 今日里程(datatype = 2), 总里程(datatype = 3), 今日消耗(datatype = 4), 
+	最近心律(datatype = 5), 日期(datatype = 6), 天气温度(datatype = 8), 剩余电力(datatype = 10), model为该数据项的型号, 默认为0, 以后同一数据项会支持更多的显示形式 -->
+<WatchFace version="1.0">
+	<WatchFaceItem type="datawidget" dataType="1" model="1" />
+	<WatchFaceItem type="datawidget" dataType="2" model="1" />
+	<WatchFaceItem type="datawidget" dataType="3" model="1" />
+	<WatchFaceItem type="datawidget" dataType="10" model="1" />
+	<WatchFaceItem type="datawidget" dataType="5" model="1" />
+	<WatchFaceItem type="datawidget" dataType="4" model="1" />
+	<WatchFaceItem type="datawidget" dataType="6" model="1" />
+	<WatchFaceItem type="datawidget" dataType="6" model="2" />
+	<WatchFaceItem type="datawidget" dataType="6" model="3" />
+	<WatchFaceItem type="datawidget" dataType="8" model="1" />
+	<WatchFaceItem type="datawidget" dataType="12" model="1" />
+	<WatchFaceItem type="datawidget" dataType="0" model="0" />
+</WatchFace>

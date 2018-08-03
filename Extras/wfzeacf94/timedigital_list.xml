@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WatchFace version="1.0">
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/01" preview="@wfz/timedigital/preview0.png" />
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/02" preview="@wfz/timedigital/preview1.png" />
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/03" preview="@wfz/timedigital/preview2.png" />
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/04" preview="@wfz/timedigital/preview3.png" />
+	<WatchFaceItem type="timedigital" x="59" y="115" width="202" height="90" font="@wfz/font/05" preview="@wfz/timedigital/preview4.png" />
+</WatchFace>
