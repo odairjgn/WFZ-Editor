@@ -9,7 +9,7 @@ namespace WFZ_Editor.Forms
         {
             InitializeComponent();
         }
-        
+
         private void fontManagerToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             var form = new FontManager() { MdiParent = this };
@@ -19,6 +19,12 @@ namespace WFZ_Editor.Forms
         private void fontEditorToolStripMenuItem_Click_1(object sender, System.EventArgs e)
         {
             var form = new FontEditor() { MdiParent = this };
+            form.Show();
+        }
+
+        private void newProjectToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            var form = new Project() { MdiParent = this };
             form.Show();
         }
     }
