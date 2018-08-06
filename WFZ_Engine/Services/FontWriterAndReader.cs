@@ -81,7 +81,9 @@ namespace WFZ_Engine.Services
             var xmlserializer = new XmlSerializer(fontwtz.GetType());
             using (var strwriter = new StreamWriterUTF8(Path.Combine(fontFolder.FullName, "font.xml")))
             {
-                xmlserializer.Serialize(strwriter, fontwtz);
+                var ns = new XmlSerializerNamespaces();
+                ns.Add("", "");
+                xmlserializer.Serialize(strwriter, fontwtz, ns);
                 strwriter.Close();
             }
         }
