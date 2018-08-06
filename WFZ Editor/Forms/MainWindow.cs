@@ -3,9 +3,9 @@ using WFZ_Editor.Forms.Editors;
 
 namespace WFZ_Editor.Forms
 {
-    public partial class Editor : Form
+    public partial class MainWindow : Form
     {
-        public Editor()
+        public MainWindow()
         {
             InitializeComponent();
         }

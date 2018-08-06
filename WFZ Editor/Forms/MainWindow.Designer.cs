@@ -1,6 +1,6 @@
 ﻿namespace WFZ_Editor.Forms
 {
-    partial class Editor
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
