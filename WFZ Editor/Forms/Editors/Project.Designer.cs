@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("@wfz");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Lists");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Backgrounds");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Graduations");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Time Hands");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("DataWidget");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Fonts");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Resources", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("@wfz");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Lists");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Backgrounds");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Graduations");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Time Hands");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("DataWidget");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Fonts");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Resources", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Project));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.menuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.imgListProj = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.menuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbHi = new System.Windows.Forms.TabPage();
+            this.tbLo = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuContext.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.menuContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,34 +100,53 @@
             this.treeView1.ImageList = this.imgListProj;
             this.treeView1.Location = new System.Drawing.Point(0, 25);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "@wfz";
-            treeNode1.Text = "@wfz";
-            treeNode2.ImageKey = "object.png";
-            treeNode2.Name = "lists";
-            treeNode2.Text = "Lists";
-            treeNode3.ImageKey = "background.png";
-            treeNode3.Name = "background";
-            treeNode3.Text = "Backgrounds";
-            treeNode4.ImageKey = "rule.png";
-            treeNode4.Name = "graduation";
-            treeNode4.Text = "Graduations";
-            treeNode5.ImageKey = "clock.png";
-            treeNode5.Name = "timehand";
-            treeNode5.Text = "Time Hands";
-            treeNode6.ImageKey = "widget.png";
-            treeNode6.Name = "datawidget";
-            treeNode6.Text = "DataWidget";
-            treeNode7.ImageKey = "font.png";
-            treeNode7.Name = "font";
-            treeNode7.Text = "Fonts";
-            treeNode8.Name = "resources";
-            treeNode8.Text = "Resources";
+            treeNode9.Name = "@wfz";
+            treeNode9.Text = "@wfz";
+            treeNode10.ImageKey = "object.png";
+            treeNode10.Name = "lists";
+            treeNode10.Text = "Lists";
+            treeNode11.ImageKey = "background.png";
+            treeNode11.Name = "background";
+            treeNode11.Text = "Backgrounds";
+            treeNode12.ImageKey = "rule.png";
+            treeNode12.Name = "graduation";
+            treeNode12.Text = "Graduations";
+            treeNode13.ImageKey = "clock.png";
+            treeNode13.Name = "timehand";
+            treeNode13.Text = "Time Hands";
+            treeNode14.ImageKey = "widget.png";
+            treeNode14.Name = "datawidget";
+            treeNode14.Text = "DataWidget";
+            treeNode15.ImageKey = "font.png";
+            treeNode15.Name = "font";
+            treeNode15.Text = "Fonts";
+            treeNode16.Name = "resources";
+            treeNode16.Text = "Resources";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode8});
+            treeNode9,
+            treeNode16});
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(276, 444);
             this.treeView1.TabIndex = 1;
+            // 
+            // menuContext
+            // 
+            this.menuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAdd,
+            this.toolStripSeparator1});
+            this.menuContext.Name = "menuContext";
+            this.menuContext.Size = new System.Drawing.Size(97, 32);
+            // 
+            // tsmAdd
+            // 
+            this.tsmAdd.Name = "tsmAdd";
+            this.tsmAdd.Size = new System.Drawing.Size(96, 22);
+            this.tsmAdd.Text = "Add";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(93, 6);
             // 
             // imgListProj
             // 
@@ -182,52 +201,33 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tbHi);
+            this.tabControl1.Controls.Add(this.tbLo);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(279, 303);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tbHi
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(271, 277);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbHi.Location = new System.Drawing.Point(4, 22);
+            this.tbHi.Name = "tbHi";
+            this.tbHi.Padding = new System.Windows.Forms.Padding(3);
+            this.tbHi.Size = new System.Drawing.Size(271, 277);
+            this.tbHi.TabIndex = 0;
+            this.tbHi.Text = "Hi-Fi";
+            this.tbHi.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tbLo
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(271, 277);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // menuContext
-            // 
-            this.menuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAdd,
-            this.toolStripSeparator1});
-            this.menuContext.Name = "menuContext";
-            this.menuContext.Size = new System.Drawing.Size(97, 32);
-            // 
-            // tsmAdd
-            // 
-            this.tsmAdd.Name = "tsmAdd";
-            this.tsmAdd.Size = new System.Drawing.Size(96, 22);
-            this.tsmAdd.Text = "Add";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(93, 6);
+            this.tbLo.Location = new System.Drawing.Point(4, 22);
+            this.tbLo.Name = "tbLo";
+            this.tbLo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbLo.Size = new System.Drawing.Size(271, 277);
+            this.tbLo.TabIndex = 1;
+            this.tbLo.Text = "Lo-Fi";
+            this.tbLo.UseVisualStyleBackColor = true;
             // 
             // Project
             // 
@@ -240,9 +240,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuContext.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.menuContext.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -257,8 +257,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbHi;
+        private System.Windows.Forms.TabPage tbLo;
         private System.Windows.Forms.ImageList imgListProj;
         private System.Windows.Forms.ContextMenuStrip menuContext;
         private System.Windows.Forms.ToolStripMenuItem tsmAdd;
