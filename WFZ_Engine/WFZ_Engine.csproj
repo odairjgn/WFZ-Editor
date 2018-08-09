@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Componentes\StreamWriterUTF8.cs" />
+    <Compile Include="Extentions\BitMapExtentions.cs" />
     <Compile Include="Services\BitmapFontBuilder.cs" />
     <Compile Include="Services\FontWriterAndReader.cs" />
     <Compile Include="ValueObjects\Contents\Element.cs" />

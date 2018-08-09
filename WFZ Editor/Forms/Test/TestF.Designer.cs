@@ -28,39 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.animatedLabel1 = new WFZ_Editor.UC.AnimatedLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestF));
+            this.picPreview1 = new WFZ_Editor.UC.PicPreview();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).BeginInit();
             this.SuspendLayout();
             // 
-            // animatedLabel1
+            // picPreview1
             // 
-            this.animatedLabel1.Alignment = System.Drawing.StringAlignment.Center;
-            this.animatedLabel1.AnimateStyle = WFZ_Editor.UC.AnimateStyle.DownToUp;
-            this.animatedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.animatedLabel1.Interval = 50;
-            this.animatedLabel1.LineAlignment = System.Drawing.StringAlignment.Center;
-            this.animatedLabel1.Location = new System.Drawing.Point(121, 14);
-            this.animatedLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.animatedLabel1.Name = "animatedLabel1";
-            this.animatedLabel1.Size = new System.Drawing.Size(106, 24);
-            this.animatedLabel1.Speed = 4F;
-            this.animatedLabel1.TabIndex = 0;
-            this.animatedLabel1.Texto = "Vamos dançar tudo nú, tudo nú! dddddddddddddddddddddddasdadsasdasd";
+            this.picPreview1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPreview1.BackgroundImage")));
+            this.picPreview1.Location = new System.Drawing.Point(94, 29);
+            this.picPreview1.Name = "picPreview1";
+            this.picPreview1.Size = new System.Drawing.Size(100, 50);
+            this.picPreview1.TabIndex = 0;
+            this.picPreview1.TabStop = false;
             // 
             // TestF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(253, 118);
-            this.Controls.Add(this.animatedLabel1);
+            this.Controls.Add(this.picPreview1);
             this.Name = "TestF";
             this.Text = "TestF";
             this.Load += new System.EventHandler(this.TestF_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UC.AnimatedLabel animatedLabel1;
+        private UC.PicPreview picPreview1;
     }
 }
