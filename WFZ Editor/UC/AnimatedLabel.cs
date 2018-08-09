@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WFZ_Editor.UC
@@ -16,8 +10,7 @@ namespace WFZ_Editor.UC
         RigthToLeft,
         LeftToRigth,
         DownToUp,
-        UpToDown,
-        LinePerLine
+        UpToDown
     }
 
     public partial class AnimatedLabel : UserControl
@@ -113,12 +106,42 @@ namespace WFZ_Editor.UC
                     AnimateLeftToRigth(g);
                     break;
                 case AnimateStyle.DownToUp:
+                    AnimateDownToUp(g);
                     break;
                 case AnimateStyle.UpToDown:
-                    break;
-                case AnimateStyle.LinePerLine:
+                    AnimateUpToDown(g);
                     break;
             }
+        }
+
+        private void AnimateUpToDown(Graphics g)
+        {
+            if (_resetAnimation)
+            {
+                var size = TextRenderer.MeasureText(Texto, Font, Size);
+                _lastRec = new RectangleF(0, size.Height*-1, size.Width, size.Height);
+                _resetAnimation = false;
+            }
+
+            g.DrawString(Texto, Font, new SolidBrush(ForeColor), _lastRec, _format);
+            _lastRec = new RectangleF(_lastRec.X, _lastRec.Y + Speed, _lastRec.Width, _lastRec.Height);
+
+            if (_lastRec.Y > Height) _resetAnimation = true;
+        }
+
+        private void AnimateDownToUp(Graphics g)
+        {
+            if (_resetAnimation)
+            {
+                var size = TextRenderer.MeasureText(Texto, Font, Size);
+                _lastRec = new RectangleF(0, Height+1, size.Width, size.Height);
+                _resetAnimation = false;
+            }
+
+            g.DrawString(Texto, Font, new SolidBrush(ForeColor), _lastRec, _format);
+            _lastRec = new RectangleF(_lastRec.X, _lastRec.Y-Speed, _lastRec.Width, _lastRec.Height);
+
+            if (_lastRec.Bottom < 0) _resetAnimation = true;
         }
 
         private void AnimateLeftToRigth(Graphics g)
@@ -134,7 +157,7 @@ namespace WFZ_Editor.UC
 
             _lastRec = new RectangleF(_lastRec.X + Speed, 0, _lastRec.Width, _lastRec.Height);
 
-            if (_lastRec.Right > 0) _resetAnimation = true;
+            if (_lastRec.X > Width) _resetAnimation = true;
         }
 
         private void AnimateRigthToLeft(Graphics g)

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using WFZ_Editor.Forms;
-using WFZ_Editor.Forms.Test;
+using 
 
-namespace WFZ_Editor
+namespace Test
 {
     static class Program
     {
@@ -15,11 +17,7 @@ namespace WFZ_Editor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-#if true
-            Application.Run(new TestF());
-#else
-            Application.Run(new MainWindow());
-#endif
+            Application.Run(new TestForm());
         }
     }
 }

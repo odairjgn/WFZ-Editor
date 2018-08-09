@@ -35,6 +35,7 @@
             // tianimation
             // 
             this.tianimation.Enabled = true;
+            this.tianimation.Tick += new System.EventHandler(this.tianimation_Tick);
             // 
             // AnimatedLabel
             // 
