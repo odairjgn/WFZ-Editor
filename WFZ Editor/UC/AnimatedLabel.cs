@@ -118,7 +118,7 @@ namespace WFZ_Editor.UC
         {
             if (_resetAnimation)
             {
-                var size = TextRenderer.MeasureText(Texto, Font, Size);
+                var size = TextRenderer.MeasureText(Texto, Font, Size, TextFormatFlags.WordBreak);
                 _lastRec = new RectangleF(0, size.Height*-1, size.Width, size.Height);
                 _resetAnimation = false;
             }
@@ -133,7 +133,7 @@ namespace WFZ_Editor.UC
         {
             if (_resetAnimation)
             {
-                var size = TextRenderer.MeasureText(Texto, Font, Size);
+                var size = TextRenderer.MeasureText(Texto, Font, Size, TextFormatFlags.WordBreak);
                 _lastRec = new RectangleF(0, Height+1, size.Width, size.Height);
                 _resetAnimation = false;
             }
@@ -183,7 +183,7 @@ namespace WFZ_Editor.UC
         }
 
 
-        private StringFormat _format = new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+        private StringFormat _format = new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center, Trimming = StringTrimming.Word};
         private string _texto = "Text";
 
         public StringAlignment Alignment

@@ -34,7 +34,7 @@
             // animatedLabel1
             // 
             this.animatedLabel1.Alignment = System.Drawing.StringAlignment.Center;
-            this.animatedLabel1.AnimateStyle = WFZ_Editor.UC.AnimateStyle.UpToDown;
+            this.animatedLabel1.AnimateStyle = WFZ_Editor.UC.AnimateStyle.DownToUp;
             this.animatedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.animatedLabel1.Interval = 50;
             this.animatedLabel1.LineAlignment = System.Drawing.StringAlignment.Center;
@@ -44,7 +44,7 @@
             this.animatedLabel1.Size = new System.Drawing.Size(106, 24);
             this.animatedLabel1.Speed = 4F;
             this.animatedLabel1.TabIndex = 0;
-            this.animatedLabel1.Texto = "teste";
+            this.animatedLabel1.Texto = "Vamos dançar tudo nú, tudo nú! dddddddddddddddddddddddasdadsasdasd";
             // 
             // TestF
             // 
