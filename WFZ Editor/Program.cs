@@ -15,7 +15,7 @@ namespace WFZ_Editor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-#if true
+#if false
             Application.Run(new TestF());
 #else
             Application.Run(new MainWindow());

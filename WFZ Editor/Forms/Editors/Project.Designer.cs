@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("@wfz");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Lists");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Backgrounds");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Graduations");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Time Hands");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("DataWidget");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Fonts");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Resources", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("@wfz");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Lists");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Backgrounds");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Graduations");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Time Hands");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("DataWidget");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Fonts");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Resources", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Project));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,11 +58,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbHi = new System.Windows.Forms.TabPage();
             this.tbLo = new System.Windows.Forms.TabPage();
+            this.picPreview1 = new WFZ_Editor.UC.PicPreview();
+            this.picPreview2 = new WFZ_Editor.UC.PicPreview();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuContext.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tbHi.SuspendLayout();
+            this.tbLo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,31 +106,31 @@
             this.treeView1.ImageList = this.imgListProj;
             this.treeView1.Location = new System.Drawing.Point(0, 25);
             this.treeView1.Name = "treeView1";
-            treeNode9.Name = "@wfz";
-            treeNode9.Text = "@wfz";
-            treeNode10.ImageKey = "object.png";
-            treeNode10.Name = "lists";
-            treeNode10.Text = "Lists";
-            treeNode11.ImageKey = "background.png";
-            treeNode11.Name = "background";
-            treeNode11.Text = "Backgrounds";
-            treeNode12.ImageKey = "rule.png";
-            treeNode12.Name = "graduation";
-            treeNode12.Text = "Graduations";
-            treeNode13.ImageKey = "clock.png";
-            treeNode13.Name = "timehand";
-            treeNode13.Text = "Time Hands";
-            treeNode14.ImageKey = "widget.png";
-            treeNode14.Name = "datawidget";
-            treeNode14.Text = "DataWidget";
-            treeNode15.ImageKey = "font.png";
-            treeNode15.Name = "font";
-            treeNode15.Text = "Fonts";
-            treeNode16.Name = "resources";
-            treeNode16.Text = "Resources";
+            treeNode1.Name = "@wfz";
+            treeNode1.Text = "@wfz";
+            treeNode2.ImageKey = "object.png";
+            treeNode2.Name = "lists";
+            treeNode2.Text = "Lists";
+            treeNode3.ImageKey = "background.png";
+            treeNode3.Name = "background";
+            treeNode3.Text = "Backgrounds";
+            treeNode4.ImageKey = "rule.png";
+            treeNode4.Name = "graduation";
+            treeNode4.Text = "Graduations";
+            treeNode5.ImageKey = "clock.png";
+            treeNode5.Name = "timehand";
+            treeNode5.Text = "Time Hands";
+            treeNode6.ImageKey = "widget.png";
+            treeNode6.Name = "datawidget";
+            treeNode6.Text = "DataWidget";
+            treeNode7.ImageKey = "font.png";
+            treeNode7.Name = "font";
+            treeNode7.Text = "Fonts";
+            treeNode8.Name = "resources";
+            treeNode8.Text = "Resources";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode16});
+            treeNode1,
+            treeNode8});
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(276, 444);
             this.treeView1.TabIndex = 1;
@@ -211,6 +217,7 @@
             // 
             // tbHi
             // 
+            this.tbHi.Controls.Add(this.picPreview1);
             this.tbHi.Location = new System.Drawing.Point(4, 22);
             this.tbHi.Name = "tbHi";
             this.tbHi.Padding = new System.Windows.Forms.Padding(3);
@@ -221,6 +228,7 @@
             // 
             // tbLo
             // 
+            this.tbLo.Controls.Add(this.picPreview2);
             this.tbLo.Location = new System.Drawing.Point(4, 22);
             this.tbLo.Name = "tbLo";
             this.tbLo.Padding = new System.Windows.Forms.Padding(3);
@@ -228,6 +236,28 @@
             this.tbLo.TabIndex = 1;
             this.tbLo.Text = "Lo-Fi";
             this.tbLo.UseVisualStyleBackColor = true;
+            // 
+            // picPreview1
+            // 
+            this.picPreview1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPreview1.BackgroundImage")));
+            this.picPreview1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picPreview1.Location = new System.Drawing.Point(3, 3);
+            this.picPreview1.Name = "picPreview1";
+            this.picPreview1.Size = new System.Drawing.Size(265, 271);
+            this.picPreview1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPreview1.TabIndex = 0;
+            this.picPreview1.TabStop = false;
+            // 
+            // picPreview2
+            // 
+            this.picPreview2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPreview2.BackgroundImage")));
+            this.picPreview2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picPreview2.Location = new System.Drawing.Point(3, 3);
+            this.picPreview2.Name = "picPreview2";
+            this.picPreview2.Size = new System.Drawing.Size(265, 271);
+            this.picPreview2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPreview2.TabIndex = 0;
+            this.picPreview2.TabStop = false;
             // 
             // Project
             // 
@@ -243,6 +273,10 @@
             this.menuContext.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tbHi.ResumeLayout(false);
+            this.tbLo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +297,7 @@
         private System.Windows.Forms.ContextMenuStrip menuContext;
         private System.Windows.Forms.ToolStripMenuItem tsmAdd;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private UC.PicPreview picPreview1;
+        private UC.PicPreview picPreview2;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbChar = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new PicPreview();
             this.lbHex = new System.Windows.Forms.Label();
             this.btOpc = new System.Windows.Forms.Button();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
@@ -107,7 +107,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbChar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private PicPreview pictureBox1;
         private System.Windows.Forms.Label lbHex;
         private System.Windows.Forms.Button btOpc;
         private System.Windows.Forms.OpenFileDialog ofdImage;

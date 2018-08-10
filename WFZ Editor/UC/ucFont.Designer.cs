@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pbPreview = new System.Windows.Forms.PictureBox();
+            this.pbPreview = new PicPreview();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,12 +123,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pbPreview;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbDetails;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private PicPreview pbPreview;
     }
 }
