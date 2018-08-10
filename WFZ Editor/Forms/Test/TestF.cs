@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace WFZ_Editor.Forms.Test
 {
@@ -24,6 +25,7 @@ namespace WFZ_Editor.Forms.Test
              
             
         }
+        
     }
     
 }

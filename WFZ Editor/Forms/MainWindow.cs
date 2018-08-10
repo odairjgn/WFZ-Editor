@@ -24,7 +24,7 @@ namespace WFZ_Editor.Forms
 
         private void newProjectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            var form = new Project() { MdiParent = this };
+            var form = new ProjectForm() { MdiParent = this };
             form.Show();
         }
     }

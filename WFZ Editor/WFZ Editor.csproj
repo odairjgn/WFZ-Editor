@@ -149,11 +149,11 @@
     <Compile Include="Forms\Editors\FontManager.Designer.cs">
       <DependentUpon>FontManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Editors\Project.cs">
+    <Compile Include="Forms\Editors\ProjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Editors\Project.Designer.cs">
-      <DependentUpon>Project.cs</DependentUpon>
+    <Compile Include="Forms\Editors\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainWindow.cs">
       <SubType>Form</SubType>
@@ -161,6 +161,7 @@
     <Compile Include="Forms\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Test\Class1.cs" />
     <Compile Include="Forms\Test\TestF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,8 +212,8 @@
     <EmbeddedResource Include="Forms\Editors\FontManager.resx">
       <DependentUpon>FontManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Editors\Project.resx">
-      <DependentUpon>Project.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Editors\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

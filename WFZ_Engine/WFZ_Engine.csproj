@@ -132,6 +132,7 @@
     <Compile Include="Services\FontWriterAndReader.cs" />
     <Compile Include="ValueObjects\Contents\Element.cs" />
     <Compile Include="ValueObjects\Contents\Resource.cs" />
+    <Compile Include="ValueObjects\Project\Project.cs" />
     <Compile Include="WfzFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XMLFiles\DataType.cs" />
