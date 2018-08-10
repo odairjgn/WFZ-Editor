@@ -57,5 +57,8 @@ namespace WFZ_Engine.ValueObjects.Project
         [Description("Based On")]
         [DisplayName("Based On")]
         public string BasedOn { get; set; }
+
+        [Browsable(false)]
+        public Background Background { get; set; } = new Background();
     }
 }

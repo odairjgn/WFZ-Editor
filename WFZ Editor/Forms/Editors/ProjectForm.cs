@@ -28,7 +28,7 @@ namespace WFZ_Editor.Forms.Editors
                     pgPropriedades.SelectedObject = _project;
                     break;
                 case "RESOURCES":
-                    pgPropriedades.SelectedObject = null;
+                    pgPropriedades.SelectedObject = _project.Background;
                     break;
                 default:
                     pgPropriedades.SelectedObject = null;
