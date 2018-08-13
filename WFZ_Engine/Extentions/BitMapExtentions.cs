@@ -1,4 +1,8 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
 
 namespace WFZ_Engine.Extentions
 {
@@ -22,6 +26,24 @@ namespace WFZ_Engine.Extentions
             var g = color.G < 128 ? 0 : 255;
             var b = color.B < 128 ? 0 : 255;
             return Color.FromArgb(r, g, b);
+        }
+
+        public static ReadOnlyCollection<Color> Palette8C => new ReadOnlyCollection<Color>(new []
+        {
+            Color.FromArgb(0, 0, 0),
+            Color.FromArgb(0, 0, 255),
+            Color.FromArgb(0, 255, 0),
+            Color.FromArgb(0, 255, 255),
+            Color.FromArgb(255, 0, 0),
+            Color.FromArgb(255, 0, 255),
+            Color.FromArgb(255, 255, 0),
+            Color.FromArgb(255, 255, 255),
+            Color.Transparent
+        });
+
+        public static bool AreAllPixels8CColor(this Bitmap bmp)
+        {
+            return bmp.Palette.Entries.All(p => Palette8C.Contains(p));
         }
     }
 }

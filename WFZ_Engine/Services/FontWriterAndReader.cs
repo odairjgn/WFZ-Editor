@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
+using WFZ_Engine.Extentions;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using SQLite.Net;
@@ -54,7 +54,7 @@ namespace WFZ_Engine.Services
 
                 await Respositories.Fonts.InsertOrReplace(fontinfo);
             }
-            catch (SQLiteException e) when(e.Message == "Constraint")
+            catch (SQLiteException e) when (e.Message == "Constraint")
             {
                 throw new Exception("Name must be unique!", e);
             }
@@ -62,10 +62,15 @@ namespace WFZ_Engine.Services
 
             var fontwtz = new WatchFace();
             var fontFolder = new DirectoryInfo(FileManager.GetFontFolder(id));
+            var fontfolder8c = new DirectoryInfo(Path.Combine(fontFolder.FullName, "8c"));
+
+            if (!fontfolder8c.Exists)
+                fontfolder8c.Create();
+
             fontFolder.GetFiles().AsParallel().ForAll(f => f.Delete());
             foreach (var bitmap in images)
             {
-                if(bitmap.Value == null) continue;
+                if (bitmap.Value == null) continue;
                 var filename = GetName(bitmap.Key);
                 var item = new WatchFaceWatchFaceItem();
                 item.type = ItemType.Font;
@@ -74,8 +79,13 @@ namespace WFZ_Engine.Services
                 fontwtz.WatchFaceItem.Add(item);
 
                 var png = Path.Combine(fontFolder.FullName, filename);
+                var png8c = Path.Combine(fontfolder8c.FullName, filename);
 
                 bitmap.Value.Save(png, ImageFormat.Png);
+                using (var bitmap8c = bitmap.Value.To8CPallet())
+                {
+                   bitmap8c.Save(png8c, ImageFormat.Png);
+                }
             }
 
             var xmlserializer = new XmlSerializer(fontwtz.GetType());
