@@ -1,4 +1,6 @@
-﻿namespace WFZ_Editor.UC
+﻿using System.Windows.Forms;
+
+namespace WFZ_Editor.UC
 {
     partial class ucFont
     {
@@ -33,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pbPreview = new PicPreview();
+            this.pbPreview = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,6 +130,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private PicPreview pbPreview;
+        private PictureBox pbPreview;
     }
 }

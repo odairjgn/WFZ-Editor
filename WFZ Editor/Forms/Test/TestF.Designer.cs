@@ -1,4 +1,6 @@
-﻿namespace WFZ_Editor.Forms.Test
+﻿using System.Windows.Forms;
+
+namespace WFZ_Editor.Forms.Test
 {
     partial class TestF
     {
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestF));
-            this.picPreview1 = new WFZ_Editor.UC.PicPreview();
+            this.picPreview1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,6 @@
 
         #endregion
 
-        private UC.PicPreview picPreview1;
+        private PictureBox picPreview1;
     }
 }

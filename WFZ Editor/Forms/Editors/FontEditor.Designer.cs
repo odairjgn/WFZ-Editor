@@ -52,8 +52,6 @@
             this.btForeColorT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cpBackColor = new WFZ_Editor.UC.customColorPicker();
-            this.cpForeColor = new WFZ_Editor.UC.customColorPicker();
             this.ckStrikeOut = new System.Windows.Forms.CheckBox();
             this.ckUnderline = new System.Windows.Forms.CheckBox();
             this.ckItalic = new System.Windows.Forms.CheckBox();
@@ -63,6 +61,9 @@
             this.btSelectFileFont = new System.Windows.Forms.Button();
             this.btSelectSystemFont = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ofdFont = new System.Windows.Forms.OpenFileDialog();
+            this.cpBackColor = new WFZ_Editor.UC.customColorPicker();
+            this.cpForeColor = new WFZ_Editor.UC.customColorPicker();
             this.checkBoxChar46 = new WFZ_Editor.UC.checkBoxChar();
             this.checkBoxChar45 = new WFZ_Editor.UC.checkBoxChar();
             this.checkBoxChar44 = new WFZ_Editor.UC.checkBoxChar();
@@ -109,13 +110,24 @@
             this.checkBoxChar3 = new WFZ_Editor.UC.checkBoxChar();
             this.checkBoxChar2 = new WFZ_Editor.UC.checkBoxChar();
             this.checkBoxChar1 = new WFZ_Editor.UC.checkBoxChar();
-            this.ofdFont = new System.Windows.Forms.OpenFileDialog();
             this.ucChar1 = new WFZ_Editor.UC.ucChar();
             this.ucChar2 = new WFZ_Editor.UC.ucChar();
             this.ucChar3 = new WFZ_Editor.UC.ucChar();
             this.ucChar4 = new WFZ_Editor.UC.ucChar();
             this.ucChar5 = new WFZ_Editor.UC.ucChar();
             this.ucChar6 = new WFZ_Editor.UC.ucChar();
+            this.ucChar7 = new WFZ_Editor.UC.ucChar();
+            this.ucChar8 = new WFZ_Editor.UC.ucChar();
+            this.ucChar9 = new WFZ_Editor.UC.ucChar();
+            this.ucChar10 = new WFZ_Editor.UC.ucChar();
+            this.ucChar11 = new WFZ_Editor.UC.ucChar();
+            this.ucChar12 = new WFZ_Editor.UC.ucChar();
+            this.ucChar13 = new WFZ_Editor.UC.ucChar();
+            this.ucChar14 = new WFZ_Editor.UC.ucChar();
+            this.ucChar15 = new WFZ_Editor.UC.ucChar();
+            this.ucChar16 = new WFZ_Editor.UC.ucChar();
+            this.ucChar17 = new WFZ_Editor.UC.ucChar();
+            this.ucChar18 = new WFZ_Editor.UC.ucChar();
             this.tableLayoutPanel1.SuspendLayout();
             this.flpChars.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,6 +164,18 @@
             this.flpChars.Controls.Add(this.ucChar4);
             this.flpChars.Controls.Add(this.ucChar5);
             this.flpChars.Controls.Add(this.ucChar6);
+            this.flpChars.Controls.Add(this.ucChar7);
+            this.flpChars.Controls.Add(this.ucChar8);
+            this.flpChars.Controls.Add(this.ucChar9);
+            this.flpChars.Controls.Add(this.ucChar10);
+            this.flpChars.Controls.Add(this.ucChar11);
+            this.flpChars.Controls.Add(this.ucChar12);
+            this.flpChars.Controls.Add(this.ucChar13);
+            this.flpChars.Controls.Add(this.ucChar14);
+            this.flpChars.Controls.Add(this.ucChar15);
+            this.flpChars.Controls.Add(this.ucChar16);
+            this.flpChars.Controls.Add(this.ucChar17);
+            this.flpChars.Controls.Add(this.ucChar18);
             this.flpChars.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpChars.Location = new System.Drawing.Point(329, 3);
             this.flpChars.Name = "flpChars";
@@ -448,25 +472,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Fore Color:";
             // 
-            // cpBackColor
-            // 
-            this.cpBackColor.BackColor = System.Drawing.SystemColors.Control;
-            this.cpBackColor.Color = System.Drawing.Color.White;
-            this.cpBackColor.Location = new System.Drawing.Point(149, 94);
-            this.cpBackColor.Name = "cpBackColor";
-            this.cpBackColor.Size = new System.Drawing.Size(97, 18);
-            this.cpBackColor.SolidColorOnly = true;
-            this.cpBackColor.TabIndex = 11;
-            // 
-            // cpForeColor
-            // 
-            this.cpForeColor.Color = System.Drawing.Color.Black;
-            this.cpForeColor.Location = new System.Drawing.Point(149, 72);
-            this.cpForeColor.Name = "cpForeColor";
-            this.cpForeColor.Size = new System.Drawing.Size(97, 18);
-            this.cpForeColor.SolidColorOnly = true;
-            this.cpForeColor.TabIndex = 9;
-            // 
             // ckStrikeOut
             // 
             this.ckStrikeOut.AutoSize = true;
@@ -599,6 +604,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chars";
+            // 
+            // ofdFont
+            // 
+            this.ofdFont.Filter = "True Type Fonts|*.ttf";
+            // 
+            // cpBackColor
+            // 
+            this.cpBackColor.BackColor = System.Drawing.SystemColors.Control;
+            this.cpBackColor.Color = System.Drawing.Color.White;
+            this.cpBackColor.Location = new System.Drawing.Point(149, 94);
+            this.cpBackColor.Name = "cpBackColor";
+            this.cpBackColor.Size = new System.Drawing.Size(97, 18);
+            this.cpBackColor.SolidColorOnly = true;
+            this.cpBackColor.TabIndex = 11;
+            // 
+            // cpForeColor
+            // 
+            this.cpForeColor.Color = System.Drawing.Color.Black;
+            this.cpForeColor.Location = new System.Drawing.Point(149, 72);
+            this.cpForeColor.Name = "cpForeColor";
+            this.cpForeColor.Size = new System.Drawing.Size(97, 18);
+            this.cpForeColor.SolidColorOnly = true;
+            this.cpForeColor.TabIndex = 9;
             // 
             // checkBoxChar46
             // 
@@ -1180,10 +1208,6 @@
             this.checkBoxChar1.UseVisualStyleBackColor = true;
             this.checkBoxChar1.CheckedChanged += new System.EventHandler(this.checkBoxChar_CheckedChanged);
             // 
-            // ofdFont
-            // 
-            this.ofdFont.Filter = "True Type Fonts|*.ttf";
-            // 
             // ucChar1
             // 
             this.ucChar1.BackColor = System.Drawing.Color.White;
@@ -1255,6 +1279,150 @@
             this.ucChar6.Name = "ucChar6";
             this.ucChar6.Size = new System.Drawing.Size(161, 155);
             this.ucChar6.TabIndex = 5;
+            // 
+            // ucChar7
+            // 
+            this.ucChar7.BackColor = System.Drawing.Color.White;
+            this.ucChar7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar7.Char = '\0';
+            this.ucChar7.Image = null;
+            this.ucChar7.Image8c = null;
+            this.ucChar7.Location = new System.Drawing.Point(3, 325);
+            this.ucChar7.Name = "ucChar7";
+            this.ucChar7.Size = new System.Drawing.Size(161, 155);
+            this.ucChar7.TabIndex = 6;
+            // 
+            // ucChar8
+            // 
+            this.ucChar8.BackColor = System.Drawing.Color.White;
+            this.ucChar8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar8.Char = '\0';
+            this.ucChar8.Image = null;
+            this.ucChar8.Image8c = null;
+            this.ucChar8.Location = new System.Drawing.Point(170, 325);
+            this.ucChar8.Name = "ucChar8";
+            this.ucChar8.Size = new System.Drawing.Size(161, 155);
+            this.ucChar8.TabIndex = 7;
+            // 
+            // ucChar9
+            // 
+            this.ucChar9.BackColor = System.Drawing.Color.White;
+            this.ucChar9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar9.Char = '\0';
+            this.ucChar9.Image = null;
+            this.ucChar9.Image8c = null;
+            this.ucChar9.Location = new System.Drawing.Point(337, 325);
+            this.ucChar9.Name = "ucChar9";
+            this.ucChar9.Size = new System.Drawing.Size(161, 155);
+            this.ucChar9.TabIndex = 8;
+            // 
+            // ucChar10
+            // 
+            this.ucChar10.BackColor = System.Drawing.Color.White;
+            this.ucChar10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar10.Char = '\0';
+            this.ucChar10.Image = null;
+            this.ucChar10.Image8c = null;
+            this.ucChar10.Location = new System.Drawing.Point(3, 486);
+            this.ucChar10.Name = "ucChar10";
+            this.ucChar10.Size = new System.Drawing.Size(161, 155);
+            this.ucChar10.TabIndex = 9;
+            // 
+            // ucChar11
+            // 
+            this.ucChar11.BackColor = System.Drawing.Color.White;
+            this.ucChar11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar11.Char = '\0';
+            this.ucChar11.Image = null;
+            this.ucChar11.Image8c = null;
+            this.ucChar11.Location = new System.Drawing.Point(170, 486);
+            this.ucChar11.Name = "ucChar11";
+            this.ucChar11.Size = new System.Drawing.Size(161, 155);
+            this.ucChar11.TabIndex = 10;
+            // 
+            // ucChar12
+            // 
+            this.ucChar12.BackColor = System.Drawing.Color.White;
+            this.ucChar12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar12.Char = '\0';
+            this.ucChar12.Image = null;
+            this.ucChar12.Image8c = null;
+            this.ucChar12.Location = new System.Drawing.Point(337, 486);
+            this.ucChar12.Name = "ucChar12";
+            this.ucChar12.Size = new System.Drawing.Size(161, 155);
+            this.ucChar12.TabIndex = 11;
+            // 
+            // ucChar13
+            // 
+            this.ucChar13.BackColor = System.Drawing.Color.White;
+            this.ucChar13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar13.Char = '\0';
+            this.ucChar13.Image = null;
+            this.ucChar13.Image8c = null;
+            this.ucChar13.Location = new System.Drawing.Point(3, 647);
+            this.ucChar13.Name = "ucChar13";
+            this.ucChar13.Size = new System.Drawing.Size(161, 155);
+            this.ucChar13.TabIndex = 12;
+            // 
+            // ucChar14
+            // 
+            this.ucChar14.BackColor = System.Drawing.Color.White;
+            this.ucChar14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar14.Char = '\0';
+            this.ucChar14.Image = null;
+            this.ucChar14.Image8c = null;
+            this.ucChar14.Location = new System.Drawing.Point(170, 647);
+            this.ucChar14.Name = "ucChar14";
+            this.ucChar14.Size = new System.Drawing.Size(161, 155);
+            this.ucChar14.TabIndex = 13;
+            // 
+            // ucChar15
+            // 
+            this.ucChar15.BackColor = System.Drawing.Color.White;
+            this.ucChar15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar15.Char = '\0';
+            this.ucChar15.Image = null;
+            this.ucChar15.Image8c = null;
+            this.ucChar15.Location = new System.Drawing.Point(337, 647);
+            this.ucChar15.Name = "ucChar15";
+            this.ucChar15.Size = new System.Drawing.Size(161, 155);
+            this.ucChar15.TabIndex = 14;
+            // 
+            // ucChar16
+            // 
+            this.ucChar16.BackColor = System.Drawing.Color.White;
+            this.ucChar16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar16.Char = '\0';
+            this.ucChar16.Image = null;
+            this.ucChar16.Image8c = null;
+            this.ucChar16.Location = new System.Drawing.Point(3, 808);
+            this.ucChar16.Name = "ucChar16";
+            this.ucChar16.Size = new System.Drawing.Size(161, 155);
+            this.ucChar16.TabIndex = 15;
+            // 
+            // ucChar17
+            // 
+            this.ucChar17.BackColor = System.Drawing.Color.White;
+            this.ucChar17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar17.Char = '\0';
+            this.ucChar17.Image = null;
+            this.ucChar17.Image8c = null;
+            this.ucChar17.Location = new System.Drawing.Point(170, 808);
+            this.ucChar17.Name = "ucChar17";
+            this.ucChar17.Size = new System.Drawing.Size(161, 155);
+            this.ucChar17.TabIndex = 16;
+            // 
+            // ucChar18
+            // 
+            this.ucChar18.BackColor = System.Drawing.Color.White;
+            this.ucChar18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucChar18.Char = '\0';
+            this.ucChar18.Image = null;
+            this.ucChar18.Image8c = null;
+            this.ucChar18.Location = new System.Drawing.Point(337, 808);
+            this.ucChar18.Name = "ucChar18";
+            this.ucChar18.Size = new System.Drawing.Size(161, 155);
+            this.ucChar18.TabIndex = 17;
             // 
             // FontEditor
             // 
@@ -1372,5 +1540,17 @@
         private UC.ucChar ucChar4;
         private UC.ucChar ucChar5;
         private UC.ucChar ucChar6;
+        private UC.ucChar ucChar7;
+        private UC.ucChar ucChar8;
+        private UC.ucChar ucChar9;
+        private UC.ucChar ucChar10;
+        private UC.ucChar ucChar11;
+        private UC.ucChar ucChar12;
+        private UC.ucChar ucChar13;
+        private UC.ucChar ucChar14;
+        private UC.ucChar ucChar15;
+        private UC.ucChar ucChar16;
+        private UC.ucChar ucChar17;
+        private UC.ucChar ucChar18;
     }
 }

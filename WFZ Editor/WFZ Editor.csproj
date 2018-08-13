@@ -191,9 +191,6 @@
     <Compile Include="UC\CustomFontDialog.Designer.cs">
       <DependentUpon>CustomFontDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\PicPreview.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="UC\ucChar.cs">
       <SubType>UserControl</SubType>
     </Compile>

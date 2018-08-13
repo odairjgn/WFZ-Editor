@@ -1,4 +1,6 @@
-﻿namespace WFZ_Editor.UC
+﻿using System.Windows.Forms;
+
+namespace WFZ_Editor.UC
 {
     partial class ucChar
     {
@@ -28,13 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChar));
             this.lbChar = new System.Windows.Forms.Label();
-            this.picFull = new WFZ_Editor.UC.PicPreview();
+            this.picFull = new System.Windows.Forms.PictureBox();
             this.lbHex = new System.Windows.Forms.Label();
             this.btOpc = new System.Windows.Forms.Button();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
-            this.pic8c = new WFZ_Editor.UC.PicPreview();
+            this.pic8c = new System.Windows.Forms.PictureBox();
             this.btOpc8c = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@
             this.picFull.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picFull.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFull.BackgroundImage")));
+            this.picFull.BackgroundImage = global::WFZ_Editor.Properties.Resources.transp;
             this.picFull.Location = new System.Drawing.Point(3, 28);
             this.picFull.Name = "picFull";
             this.picFull.Size = new System.Drawing.Size(74, 106);
@@ -98,7 +99,7 @@
             this.pic8c.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic8c.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic8c.BackgroundImage")));
+            this.pic8c.BackgroundImage = global::WFZ_Editor.Properties.Resources.transp;
             this.pic8c.Location = new System.Drawing.Point(83, 28);
             this.pic8c.Name = "pic8c";
             this.pic8c.Size = new System.Drawing.Size(74, 106);
@@ -165,11 +166,11 @@
         #endregion
 
         private System.Windows.Forms.Label lbChar;
-        private PicPreview picFull;
+        private PictureBox picFull;
         private System.Windows.Forms.Label lbHex;
         private System.Windows.Forms.Button btOpc;
         private System.Windows.Forms.OpenFileDialog ofdImage;
-        private PicPreview pic8c;
+        private PictureBox pic8c;
         private System.Windows.Forms.Button btOpc8c;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
