@@ -179,6 +179,18 @@
     <Compile Include="UC\checkBoxChar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UC\Colors8c.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Colors8c.Designer.cs">
+      <DependentUpon>Colors8c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\custom8cColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\custom8cColorPicker.Designer.cs">
+      <DependentUpon>custom8cColorPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\customColorPicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +242,12 @@
     </Compile>
     <EmbeddedResource Include="UC\AnimatedLabel.resx">
       <DependentUpon>AnimatedLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Colors8c.resx">
+      <DependentUpon>Colors8c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\custom8cColorPicker.resx">
+      <DependentUpon>custom8cColorPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\customColorPicker.resx">
       <DependentUpon>customColorPicker.cs</DependentUpon>

@@ -31,7 +31,7 @@ namespace WFZ_Engine.Services
         public ConfirmDelegate Confirm { get; }
         public ShowErrorDelegate ShowError { get; }
 
-        public async Task SaveFont(string name, long id, Dictionary<char, Bitmap> images)
+        public async Task SaveFont(string name, long id, Dictionary<char, (Bitmap hifi, Bitmap lofi)> images)
         {
             var fontinfo = await Respositories.Fonts.Find(id);
             try
@@ -70,7 +70,7 @@ namespace WFZ_Engine.Services
             fontFolder.GetFiles().AsParallel().ForAll(f => f.Delete());
             foreach (var bitmap in images)
             {
-                if (bitmap.Value == null) continue;
+                if (bitmap.Value.hifi == null || bitmap.Value.hifi == null) continue;
                 var filename = GetName(bitmap.Key);
                 var item = new WatchFaceWatchFaceItem();
                 item.type = ItemType.Font;
@@ -81,11 +81,8 @@ namespace WFZ_Engine.Services
                 var png = Path.Combine(fontFolder.FullName, filename);
                 var png8c = Path.Combine(fontfolder8c.FullName, filename);
 
-                bitmap.Value.Save(png, ImageFormat.Png);
-                using (var bitmap8c = bitmap.Value.To8CPallet())
-                {
-                   bitmap8c.Save(png8c, ImageFormat.Png);
-                }
+                bitmap.Value.hifi.Save(png, ImageFormat.Png);
+                bitmap.Value.lofi.Save(png8c, ImageFormat.Png);
             }
 
             var xmlserializer = new XmlSerializer(fontwtz.GetType());

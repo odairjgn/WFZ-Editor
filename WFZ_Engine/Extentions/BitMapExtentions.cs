@@ -24,6 +24,12 @@ namespace WFZ_Engine.Extentions
             return clone;
         }
 
+        public static Color GetBlackOrWhite(this Color color)
+        {
+            var sum = color.R + color.G + color.B;
+            return sum > 128 * 3 ? Color.Black : Color.White;
+        }
+
         public static Color Get8CColor(this Color color)
         {
             var r = color.R < 128 ? 0 : 255;

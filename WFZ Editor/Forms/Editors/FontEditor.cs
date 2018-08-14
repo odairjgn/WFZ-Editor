@@ -7,8 +7,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFZ_Data.Entity;
 using WFZ_Editor.Extentions;
 using WFZ_Editor.UC;
+using WFZ_Engine.Extentions;
 using WFZ_Engine.Services;
 
 namespace WFZ_Editor.Forms.Editors
@@ -16,6 +18,7 @@ namespace WFZ_Editor.Forms.Editors
     public partial class FontEditor : Form
     {
         private readonly Action _refreshaction;
+        private readonly FontInfo _font;
         private FontFamily _currentFont = null;
 
         private FontFamily CurrentFont
@@ -48,9 +51,10 @@ namespace WFZ_Editor.Forms.Editors
             }
         }
 
-        public FontEditor(Action refreshaction = null, Font font = null)
+        public FontEditor(Action refreshaction = null, FontInfo font = null)
         {
             _refreshaction = refreshaction;
+            _font = font;
             InitializeComponent();
             CurrentFont = new FontFamily("Arial");
         }
@@ -125,7 +129,10 @@ namespace WFZ_Editor.Forms.Editors
                     var control = flpChars.Controls.OfType<ucChar>().FirstOrDefault(ct => ct.Char == img.Key);
 
                     if (control != null)
+                    {
                         control.Image = img.Value;
+                        control.Image8c = img.Value.To8CPallet();
+                    }
                 }
             }
             catch (Exception ex)
@@ -177,7 +184,8 @@ namespace WFZ_Editor.Forms.Editors
 
                 var writerreader = new FontWriterAndReader(Confirm, ShowError);
                 var font = flpChars.Controls.OfType<ucChar>()
-                    .Select(c => (c.Char, c.Image as Bitmap)).ToDictionary(t => t.Item1, t => t.Item2);
+                    .Select(c => (c.Char, (c.Image as Bitmap, c.Image8c as Bitmap)))
+                    .ToDictionary(t => t.Item1, t => t.Item2);
                 await writerreader.SaveFont(txtName.Text, 0, font);
                 Close();
             }
@@ -212,6 +220,19 @@ namespace WFZ_Editor.Forms.Editors
             catch
             {
                 // ignored
+            }
+        }
+
+        private void FontEditor_Load(object sender, EventArgs e)
+        {
+            if (_font == null)
+            {
+                var defaulchars = "0123456789:".ToCharArray();
+                var chck = groupCheckBoxes.Controls.OfType<checkBoxChar>().Where(cb => defaulchars.Contains(cb.Char));
+                foreach (var ck in chck)
+                {
+                    ck.Checked = true;
+                }
             }
         }
     }
