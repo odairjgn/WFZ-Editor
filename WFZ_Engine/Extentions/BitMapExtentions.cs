@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 
 namespace WFZ_Engine.Extentions
@@ -12,11 +13,14 @@ namespace WFZ_Engine.Extentions
         {
             if (!(original.Clone() is Bitmap clone)) return null;
 
-            for (var i = 0; i < clone.Palette.Entries.Length; i++)
+            for (var x = 0;x  < clone.Width; x++)
             {
-                clone.Palette.Entries[i] = clone.Palette.Entries[i].Get8CColor();
+                for (var y = 0; y < clone.Height; y++)
+                {
+                    clone.SetPixel(x, y, clone.GetPixel(x, y).Get8CColor());
+                }
             }
-            
+
             return clone;
         }
 
