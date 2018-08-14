@@ -49,9 +49,6 @@ namespace WFZ_Editor.Forms.Editors
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tvProject = new System.Windows.Forms.TreeView();
-            this.menuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.imgListProj = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pgPropriedades = new System.Windows.Forms.PropertyGrid();
@@ -62,15 +59,17 @@ namespace WFZ_Editor.Forms.Editors
             this.picPreview1 = new System.Windows.Forms.PictureBox();
             this.tbLo = new System.Windows.Forms.TabPage();
             this.picPreview2 = new System.Windows.Forms.PictureBox();
+            this.menuAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.menuContext.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbHi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).BeginInit();
             this.tbLo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview2)).BeginInit();
+            this.menuAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -102,7 +101,6 @@ namespace WFZ_Editor.Forms.Editors
             // 
             // tvProject
             // 
-            this.tvProject.ContextMenuStrip = this.menuContext;
             this.tvProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvProject.ImageIndex = 0;
             this.tvProject.ImageList = this.imgListProj;
@@ -113,22 +111,29 @@ namespace WFZ_Editor.Forms.Editors
             treeNode1.Text = "@wfz";
             treeNode2.ImageKey = "object.png";
             treeNode2.Name = "lists";
+            treeNode2.Tag = "RESOURCES_LISTS";
             treeNode2.Text = "Lists";
             treeNode3.ImageKey = "background.png";
             treeNode3.Name = "background";
+            treeNode3.Tag = "RESOURCES_BACKGROUNDS";
             treeNode3.Text = "Backgrounds";
             treeNode4.ImageKey = "rule.png";
             treeNode4.Name = "graduation";
+            treeNode4.Tag = "RESOURCES_GRADUATIONS";
             treeNode4.Text = "Graduations";
             treeNode5.ImageKey = "clock.png";
             treeNode5.Name = "timehand";
+            treeNode5.Tag = "RESOURCES_TIMEHANDS";
             treeNode5.Text = "Time Hands";
             treeNode6.ImageKey = "widget.png";
             treeNode6.Name = "datawidget";
+            treeNode6.Tag = "RESOURCES_DATAWIDGET";
             treeNode6.Text = "DataWidget";
             treeNode7.ImageKey = "font.png";
             treeNode7.Name = "font";
+            treeNode7.Tag = "RESOURCES_FONTS";
             treeNode7.Text = "Fonts";
+            treeNode8.ContextMenuStrip = this.menuAdd;
             treeNode8.Name = "resources";
             treeNode8.Tag = "RESOURCES";
             treeNode8.Text = "Resources";
@@ -139,25 +144,6 @@ namespace WFZ_Editor.Forms.Editors
             this.tvProject.Size = new System.Drawing.Size(276, 444);
             this.tvProject.TabIndex = 1;
             this.tvProject.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvProject_AfterSelect);
-            // 
-            // menuContext
-            // 
-            this.menuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAdd,
-            this.toolStripSeparator1});
-            this.menuContext.Name = "menuContext";
-            this.menuContext.Size = new System.Drawing.Size(97, 32);
-            // 
-            // tsmAdd
-            // 
-            this.tsmAdd.Name = "tsmAdd";
-            this.tsmAdd.Size = new System.Drawing.Size(96, 22);
-            this.tsmAdd.Text = "Add";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(93, 6);
             // 
             // imgListProj
             // 
@@ -264,6 +250,19 @@ namespace WFZ_Editor.Forms.Editors
             this.picPreview2.TabIndex = 0;
             this.picPreview2.TabStop = false;
             // 
+            // menuAdd
+            // 
+            this.menuAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem});
+            this.menuAdd.Name = "menuAdd";
+            this.menuAdd.Size = new System.Drawing.Size(181, 48);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,13 +274,13 @@ namespace WFZ_Editor.Forms.Editors
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuContext.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tbHi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPreview1)).EndInit();
             this.tbLo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPreview2)).EndInit();
+            this.menuAdd.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -299,10 +298,9 @@ namespace WFZ_Editor.Forms.Editors
         private System.Windows.Forms.TabPage tbHi;
         private System.Windows.Forms.TabPage tbLo;
         private System.Windows.Forms.ImageList imgListProj;
-        private System.Windows.Forms.ContextMenuStrip menuContext;
-        private System.Windows.Forms.ToolStripMenuItem tsmAdd;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private PictureBox picPreview1;
         private PictureBox picPreview2;
+        private ContextMenuStrip menuAdd;
+        private ToolStripMenuItem addToolStripMenuItem;
     }
 }
