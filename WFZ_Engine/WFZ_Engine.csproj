@@ -114,6 +114,8 @@
       <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -128,6 +130,7 @@
   <ItemGroup>
     <Compile Include="Componentes\StreamWriterUTF8.cs" />
     <Compile Include="Extentions\BitMapExtentions.cs" />
+    <Compile Include="Extentions\CompressExtentions.cs" />
     <Compile Include="Services\BitmapFontBuilder.cs" />
     <Compile Include="Services\FontWriterAndReader.cs" />
     <Compile Include="ValueObjects\Contents\Element.cs" />
