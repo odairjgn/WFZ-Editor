@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Windows.Forms;
+using SixLabors.Fonts;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using Font = System.Drawing.Font;
+using TextRenderer = System.Windows.Forms.TextRenderer;
 
 namespace WFZ_Engine.Services
 {
@@ -24,7 +28,12 @@ namespace WFZ_Engine.Services
             PaddingY = paddingy;
             Monospace = monospace;
         }
-        
+
+
+        //public IEnumerable<(char character, Image<Argb32> image)> BuildFont_new(char[] chars)
+        //{
+        //    var sizes = chars.Where(char.IsLetterOrDigit).Select(c => SixLabors.Fonts.TextMeasurer.Measure($"{c}", new RendererOptions()))
+        //}
 
         public Dictionary<char, Bitmap> BuildFont(char[] chars)
         {
